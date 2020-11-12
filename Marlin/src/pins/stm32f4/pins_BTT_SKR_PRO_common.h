@@ -136,6 +136,14 @@
   #define Z_CS_PIN                          PB9
 #endif
 
+// use two stepper drivers --> push to E1 driver
+#define Z2_STEP_PIN                          PD15
+#define Z2_DIR_PIN                           PE7
+#define Z2_ENABLE_PIN                        PA3
+#ifndef Z2_CS_PIN
+  #define Z2_CS_PIN                          PG15
+#endif
+
 #define E0_STEP_PIN                         PE14
 #define E0_DIR_PIN                          PA0
 #define E0_ENABLE_PIN                       PC3
@@ -143,6 +151,7 @@
   #define E0_CS_PIN                         PB3
 #endif
 
+// this one is used for second Z drive !!!
 #define E1_STEP_PIN                         PD15
 #define E1_DIR_PIN                          PE7
 #define E1_ENABLE_PIN                       PA3
@@ -202,6 +211,10 @@
 
   #define Z_SERIAL_TX_PIN                   PE1
   #define Z_SERIAL_RX_PIN                   PE1
+
+  // use two stepper drives for T --> E1
+  #define Z2_SERIAL_TX_PIN                   PD1
+  #define Z2_SERIAL_RX_PIN                   PD1
 
   #define E0_SERIAL_TX_PIN                  PD4
   #define E0_SERIAL_RX_PIN                  PD4
